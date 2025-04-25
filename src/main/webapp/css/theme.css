@@ -1,0 +1,285 @@
+body {
+    background: #fff8e1;
+    background-image: linear-gradient(#e0d5a8 1px, transparent 1px),
+    linear-gradient(90deg, transparent 99%, #e0d5a8 99%);
+    background-size: 100% 30px, 30px 100%;
+    background-attachment: fixed;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* 深色模式 */
+body.dark-mode {
+    background: #2b2b2b;
+    color: #e0e0e0;
+}
+
+body.dark-mode .stars-container {
+    display: block;
+}
+
+/* 书页内容背景 */
+.book-page {
+    background: #fffbe6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), inset 0 0 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0d5a8;
+}
+
+body.dark-mode .book-page {
+    background: #3c3c3c;
+    border: 1px solid #555;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    border-bottom: 1px solid #e0d5a8;
+}
+
+body.dark-mode header {
+    border-bottom: 1px solid #555;
+}
+
+h1 {
+    color: #4a2f1a;
+}
+
+body.dark-mode h1 {
+    color: #d4d4d4;
+}
+
+nav a {
+    color: #6b4527;
+}
+
+body.dark-mode nav a {
+    color: #d4d4d4;
+}
+
+body.dark-mode nav a:hover {
+    color: #ffffff;
+}
+
+/* 主题选择框 */
+.theme-selector {
+    display: inline-block;
+    position: relative;
+}
+
+.theme-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fffbe6;
+    border: 1px solid #e0d5a8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+body.dark-mode .theme-options {
+    background: #3c3c3c;
+    border: 1px solid #555;
+}
+
+.theme-options button {
+    display: block;
+    width: 100px;
+    padding: 8px;
+    margin: 5px 0;
+    background: #9c6a3b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+body.dark-mode .theme-options button {
+    background: #d4d4d4;
+    color: #2b2b2b;
+}
+
+.theme-options button:hover {
+    background: #6b4527;
+}
+
+body.dark-mode .theme-options button:hover {
+    background: #ffffff;
+}
+
+h2 {
+    color: #6b4527;
+    border-left: 4px solid #9c6a3b;
+}
+
+body.dark-mode h2 {
+    color: #d4d4d4;
+    border-left: 4px solid #ffffff;
+}
+
+p, li {
+    color: #4a2f1a;
+}
+
+body.dark-mode p, body.dark-mode li {
+    color: #e0e0e0;
+}
+
+/* 联系表单 */
+.contact-form label {
+    color: #4a2f1a;
+}
+
+body.dark-mode .contact-form label {
+    color: #e0e0e0;
+}
+
+.contact-form input, .contact-form textarea {
+    border: 1px solid #e0d5a8;
+    background: #fefbe9;
+}
+
+body.dark-mode .contact-form input, body.dark-mode .contact-form textarea {
+    border: 1px solid #555;
+    background: #4a4a4a;
+    color: #e0e0e0;
+}
+
+.contact-form button {
+    background: #9c6a3b;
+    color: #fff;
+}
+
+body.dark-mode .contact-form button {
+    background: #d4d4d4;
+    color: #2b2b2b;
+}
+
+.contact-form button:hover {
+    background: #6b4527;
+}
+
+body.dark-mode .contact-form button:hover {
+    background: #ffffff;
+}
+
+/* 每日一言 */
+.daily-quote {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 251, 230, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .daily-quote {
+    background: rgba(60, 60, 90, 0.6);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.daily-quote p {
+    font-size: 1em;
+    color: #4a2f1a;
+    margin: 0;
+}
+
+body.dark-mode .daily-quote p {
+    color: #e0e0e0;
+}
+
+#daily-quote-text {
+    font-style: italic;
+    color: #9c6a3b;
+}
+
+body.dark-mode #daily-quote-text {
+    color: #d4d4d4;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #e0d5a8;
+    margin-top: 40px;
+}
+
+body.dark-mode footer {
+    border-top: 1px solid #555;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #6b4527;
+}
+
+body.dark-mode .footer-links a {
+    color: #d4d4d4;
+}
+
+.footer-links a:hover {
+    color: #9c6a3b;
+}
+
+body.dark-mode .footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-icp p {
+    font-size: 0.9em;
+    color: #4a2f1a;
+    margin: 10px 0 0;
+}
+
+body.dark-mode .footer-icp p {
+    color: #e0e0e0;
+}
+
+.footer-icp a {
+    color: #6b4527;
+    text-decoration: none;
+}
+
+body.dark-mode .footer-icp a {
+    color: #d4d4d4;
+}
+
+.footer-icp a:hover {
+    color: #9c6a3b;
+}
+
+body.dark-mode .footer-icp a:hover {
+    color: #ffffff;
+}
+
+/* 回到顶部按钮 */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    background: #9c6a3b;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.5s ease-in-out;
+}
+
+body.dark-mode #back-to-top {
+    background: #d4d4d4;
+    color: #2b2b2b;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+}
+
+#back-to-top:hover {
+    transform: scale(1.1);
+}
