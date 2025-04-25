@@ -1,5 +1,6 @@
 package com.personal.servlet;
 
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -13,6 +14,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.logging.Logger;
 
@@ -46,7 +48,7 @@ public class EmailServlet extends HttpServlet {
             LOGGER.info("表单数据 - 姓名: " + name + ", 邮箱: " + email + ", 留言: " + message);
 
             // 发送邮件
-            sendEmail(name, email, message);
+            sendEmail(name, email, message,getServletContext());
 
             LOGGER.info("邮件发送成功");
             responseJson.addProperty("success", true);
@@ -59,11 +61,27 @@ public class EmailServlet extends HttpServlet {
         }
     }
 
-    private void sendEmail(String name, String email, String message) throws MessagingException {
+    // 载入环境变量
+    private String loadPassword(ServletContext context) throws IOException {
+        Properties props = new Properties();
+        try (InputStream input = context.getResourceAsStream("/WEB-INF/config.properties")) {
+            if (input == null) {
+                throw new IOException("找不到 WEB-INF/config.properties 文件！");
+            }
+            props.load(input);
+            String password = props.getProperty("email.qq.code");
+            if (password == null) {
+                throw new IOException("config.properties 中未找到 email.auth.code！");
+            }
+            return password;
+        }
+    }
+
+    private void sendEmail(String name, String email, String message, ServletContext context) throws MessagingException, IOException {
         String host = "smtp.qq.com";
         String port = "465";
         String username = "2740954024@qq.com"; // 替换成你的QQ邮箱
-        String password = "rulutfakzbzkdfjc"; // 替换成授权码
+        String password = loadPassword(context);
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");

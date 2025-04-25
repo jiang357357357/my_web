@@ -60,13 +60,13 @@
     <!-- 页脚 -->
     <footer>
         <div class="footer-links">
-            <a href="https://github.com/linzhe" target="_blank" title="GitHub">
+            <a href="https://github.com/jiang357357357" target="_blank" title="GitHub">
                 <i class="fab fa-github"></i>
             </a> |
-            <a href="https://bilibili.com/linzhe" target="_blank" title="B站">
+            <a href="https://space.bilibili.com/312989098" target="_blank" title="B站">
                 <i class="fab fa-bilibili"></i>
             </a> |
-            <a href="https://blog.linzhe.com" target="_blank" title="博客">
+            <a href="https://blog.csdn.net/zz357357357?type=blog" target="_blank" title="博客">
                 <i class="fas fa-blog"></i>
             </a>
         </div>
